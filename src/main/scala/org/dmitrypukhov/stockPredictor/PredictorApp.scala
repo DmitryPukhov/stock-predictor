@@ -8,11 +8,12 @@ import org.slf4j.LoggerFactory
   * Application entry with main()
   */
 object PredictorApp extends App {
-  // Input
-  val ds = new TickStream().getTickStream()
+
   LOG.info("------------------------------------------------")
   LOG.info("---       Tick predictor application      ------")
   LOG.info("------------------------------------------------")
+  // Input
+  val ds = new TickStream().getTickStream()
   private val LOG = LoggerFactory.getLogger(this.getClass)
 
   // Process
