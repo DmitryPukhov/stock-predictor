@@ -16,8 +16,6 @@ class TickStream extends Serializable {
 
   private val tickParser = new TickParser
 
-
-
   /**
    * Input stream with ticks
    */

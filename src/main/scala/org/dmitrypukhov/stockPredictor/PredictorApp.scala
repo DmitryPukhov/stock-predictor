@@ -2,6 +2,7 @@ package org.dmitrypukhov.stockPredictor
 
 
 import org.dmitrypukhov.stockPredictor.input.TickStream
+import org.dmitrypukhov.stockPredictor.process.Predictor
 import org.slf4j.LoggerFactory
 
 /**
@@ -9,12 +10,18 @@ import org.slf4j.LoggerFactory
   */
 object PredictorApp extends App {
 
+  private val LOG = LoggerFactory.getLogger(this.getClass)
+
   LOG.info("------------------------------------------------")
   LOG.info("---       Tick predictor application      ------")
   LOG.info("------------------------------------------------")
+
   // Input
-  val ds = new TickStream().getTickStream()
-  private val LOG = LoggerFactory.getLogger(this.getClass)
+  val ticks = new TickStream().getTickStream()
+
+  // Predict nearest low-high pair
+  val prediction = new Predictor().predict(ticks)
+
 
   // Process
   // Print data for test
