@@ -1,5 +1,8 @@
 *.class
 *.log
+*.Rproj
+*.RData
+*.Rhistory
 ### Scala template
 
 # sbt specific
@@ -150,3 +153,4 @@ hs_err_pid*
 .idea/modules.xml
 .idea/vcs.xml
 stock-predictor.iml
+.Rproj.user
