@@ -128,7 +128,7 @@ add.rule(strategy.st,
                         ordertype="market",
                         orderside="long",
                         replace=FALSE,
-                        prever="Open"),
+                        prever="High"),
          type="exit")
 add.rule(strategy.st,
          name="ruleSignal",
@@ -139,8 +139,8 @@ add.rule(strategy.st,
                         orderside="long",
                         # Do not replace other signals
                         replace=FALSE,
-                        # Buy at the next day's opening price
-                        prefer="Open"),
+                        # Buy at the next bar's opening price
+                        prefer="High"),
          type="enter")
 
 #################################################
